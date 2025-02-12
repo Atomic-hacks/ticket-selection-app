@@ -1,0 +1,55 @@
+.ticket-selection {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-info {
+  margin-bottom: 20px;
+}
+
+.ticket-types {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ticket-type {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.ticket-type.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.ticket-quantity {
+  margin-bottom: 20px;
+}
+
+.ticket-quantity label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ticket-quantity input {
+  width: 100%;
+  padding: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
