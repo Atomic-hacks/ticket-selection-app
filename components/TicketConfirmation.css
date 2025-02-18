@@ -1,0 +1,177 @@
+.ticket-container {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  padding: 6px 12px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.nav-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #197686;
+}
+
+.my-tickets-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #096777;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.my-tickets-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 30px;
+  background: #052228;
+  padding: 40px 20px;
+  border: 2px solid #07373F;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ticket {
+  width: 100%;
+  max-width: 320px;
+  padding: 2px;
+  background: #12464E;
+  border-radius: 15px;
+  border: 2px solid #197686;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ticket:hover {
+  border-color: rgb(0, 191, 213);
+  background-color: #096777;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #096777;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.primary-btn {
+  background-color: rgb(0, 191, 213);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+  margin-left: 1rem;
+  transition: all 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: rgb(0, 171, 193);
+}
+
+@media (max-width: 480px) {
+  .main-content {
+      padding: 1rem;
+  }
+  
+  .actions {
+      flex-direction: column;
+  }
+  
+  .secondary-btn,
+  .primary-btn {
+      width: 100%;
+  }
+  
+  .primary-btn {
+      margin-left: 0;
+      margin-top: 0.75rem;
+  }
+}

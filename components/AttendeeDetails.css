@@ -1,0 +1,266 @@
+
+.attendee-details-container {
+    min-height: 100vh;
+    width: 100%;
+    background: #001924;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .attendee-details-wrapper {
+    max-width: 450px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .attendee-details-card {
+    background-color: rgba(2, 31, 45, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .step-indicator {
+    color: #8F9BAA;
+    font-size: 0.875rem;
+  }
+  
+  .form-content {
+    padding: 1.5rem;
+  }
+  
+  .profile-upload-section {
+    margin-bottom: 2rem;
+  }
+  
+  .upload-title {
+    margin-bottom: 1rem;
+    color: #ccd2d8;
+    font-size: 0.9rem;
+  }
+  
+  .upload-box {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #2c4254;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+    background-color: rgba(9, 41, 56, 0.5);
+  }
+  
+  .upload-box:hover {
+    border-color: #4a90e2;
+    background-color: rgba(9, 41, 56, 0.8);
+  }
+  
+  .upload-box.error {
+    border-color: #e74c3c;
+  }
+  
+  .upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .upload-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(143, 155, 170, 0.1);
+    border-radius: 50%;
+  }
+  
+  .upload-text {
+    font-size: 0.85rem;
+    color: #8F9BAA;
+  }
+  
+  .uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .url-input-container {
+    margin-top: 1rem;
+  }
+  
+  .url-input-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: #8F9BAA;
+  }
+  
+  .url-input-container input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #2c4254;
+    background-color: rgba(9, 41, 56, 0.5);
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .form-fields {
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #ccd2d8;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #2c4254;
+    background-color: rgba(9, 41, 56, 0.5);
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .email-input-container {
+    position: relative;
+  }
+  
+  .email-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: block;
+  }
+  
+  .action-buttons {
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: spa;
+  }
+  
+  .back-button,
+  .pay-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .back-button {
+    background-color: transparent;
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+  }
+  
+  .back-button:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+  }
+  
+  .pay-button {
+    background-color: #4a90e2;
+    border: none;
+    color: white;
+    flex: 1;
+    margin-left: 1rem;
+  }
+  
+  .pay-button:hover {
+    background-color: #3a80d2;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #566776;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+  }
+  
+ 
+  .upload-placeholder svg path {
+    stroke: #8F9BAA;
+  }
+  
+
+  @media (max-width: 480px) {
+    .attendee-details-wrapper {
+      padding: 0 0.5rem;
+    }
+    
+    .card-header {
+      padding: 1rem;
+    }
+    
+    .form-content {
+      padding: 1rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .back-button,
+    .pay-button {
+      width: 100%;
+    }
+    
+    .pay-button {
+      margin-left: 0;
+      margin-top: 0.75rem;
+    }
+  }

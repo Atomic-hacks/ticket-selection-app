@@ -1,0 +1,257 @@
+
+.ticket-selection-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-selection-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin:0 auto 0 auto;
+}
+
+
+.ticket-selection-card {
+  background: #08252B;
+  border-radius: 30px;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #0E464F;
+  padding: 10px 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.step-indicator {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.event-banner {
+  padding: 30px 24px;
+  background:radial-gradient(circle at 20% center, #096777,#0A0C11 );
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid #07373F;
+}
+
+.event-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.event-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+}
+
+.event-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.event-separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.ticket-selection-section {
+  border-top:2px solid #07373F;
+  margin: 30px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.ticket-types {
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  gap: 15px;
+  border: 1px solid #07373F;
+  border-radius: 20px;
+  margin:30px 0;
+  padding: 30px 30px;
+  background-color: #052228;
+}
+
+.ticket-option {
+  border-radius: 15px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  border: 2px solid #197686;
+  text-align: center;
+}
+
+.ticket-option:hover, .ticket-option:focus {
+  background-color:#12464E;
+  outline: none;
+
+}
+
+.ticket-option.selected {
+  border-color: rgb(0, 191, 213);
+}
+
+.ticket-price {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.ticket-type {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+
+.ticket-availability {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ticket-quantity-section {
+  padding: 0 24px 24px;
+}
+
+.quantity-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.quantity-selector {
+  position: relative;
+}
+
+.quantity-dropdown {
+  width: 100%;
+  padding: 12px 16px;
+  background:transparent;
+  border: 1px solid #07373F;
+  border-radius: 10px;
+  color: white;
+  appearance: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.quantity-dropdown:focus {
+  outline: none;
+  border-color: rgb(0, 191, 213);
+}
+
+
+.quantity-selector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.cancel-button,
+.next-button {
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #096777;
+}
+
+.cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.next-button {
+  background-color: rgb(0, 191, 213);
+  color: white;
+  border: none;
+}
+
+.next-button:hover {
+  background-color: rgb(0, 171, 193);
+}
+
+
+@media (max-width: 768px) {
+  .ticket-selection-wrapper {
+    padding: 20px 15px;
+  }
+  
+  .event-title {
+    font-size: 24px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .ticket-types {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .event-details {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .event-separator {
+    display: none;
+  }
+}
